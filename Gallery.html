@@ -1,0 +1,62 @@
+YPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Gallery.css">
+    <title>Gallery</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <header>
+            <h1>Gallery</h1>
+        </header>
+        <main>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="oza.jpg" alt="&nbsp;&nbsp;In the 17th century, when pirate attacks were so common, Cotta Fort, specifically Fuerte de la Concepcion y del Triunfo in Ozamiz City, stood as the protector of the Ozamiznons and Misamisnons.">
+                    <p><b>Cotta Fort</b></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="boulevard.oz - Copy.jpg" alt="&nbsp;&nbsp;Boulevard New Road is a vibrant, modern thoroughfare in the city, blending urban development with scenic spaces. Featuring tree-lined sidewalks, cafes, and open-air markets, it serves as both a major transport route and a lively gathering spot for locals and visitors. The road is a hub for culture, events, and community activities, symbolizing the city's growth and creativity.">
+                    <p><b>Boulevard New Road</b></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="naomis.jpg" alt="&nbsp;&nbsp;Naomi's Botanical Garden in Ozamiz is a peaceful, eco-conscious retreat showcasing a diverse collection of local and exotic plants. It blends natural beauty with sustainable practices, offering visitors immersive environmental education, tranquil walking paths, and themed gardens. The garden serves as both a sanctuary for biodiversity and a community space promoting local culture and conservation.">
+                    <p><b>Naomi's Botanical Garden</b></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;   2024 Ozamiz City. | All Rights Reserved</p>
+        </footer>
+    </div>
+    <a href="Homeoage.html"><b>Back to Homepage</b></a>
+
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="">
+        <p class="lightbox-caption"></p>
+    </div>
+    <script>
+        document.querySelectorAll('.gallery-item img').forEach(image => {
+            image.addEventListener('click', () => {
+                const lightbox = document.querySelector('.lightbox');
+                const lightboxImage = lightbox.querySelector('img');
+                const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+                
+                lightboxImage.src = image.src;
+                lightboxCaption.textContent = image.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        document.querySelector('.lightbox-close').addEventListener('click', () => {
+            document.querySelector('.lightbox').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

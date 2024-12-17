@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sad2.css">
+    <title>Home-Page</title>
+    <style>
+        .profile-picture {
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="homepage-container">
+        <h1>Welcome to Municipality of Ozamiz City</h1>
+        <p>I'm Noel and this is my Website</p>
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>Explore the Beauty of Ozamiz City</h2>
+              </div>
+        <main>
+            <div class="profile">
+                <img src="oz-removebg-preview.png" alt="My Picture" class="profile-picture" id="profilePicture">
+                <p class="description">Ozamiz City is a small city with the population slightly exceeding 130,000 people located in Misamis Occidental, Philippines. It is a center of shopping and tourism, with a few excellent world class shopping malls and hotels, as well as the points of interest like Naomi's Botanical Garden and tourists Inn, Bukagan Hill park, Fuerte de la Concepcion y del Triunfo, Immaculate Conception Pipe organ, etc. The city gets filled up with tourists in summer and autumn, during the season of traditional local festivals and celebrations.</p>
+            </div>
+        </main>
+    
+
+    <script>
+        const profilePicture = document.getElementById('profilePicture');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { offsetWidth, offsetHeight } = profilePicture;
+            const x = clientX - (profilePicture.offsetLeft + offsetWidth / 2);
+            const y = clientY - (profilePicture.offsetTop + offsetHeight / 2);
+            const tiltX = (y / offsetHeight) * 9;
+            const tiltY = (x / offsetWidth) * -9;
+
+            profilePicture.style.transform = `perspective(500px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+
+        profilePicture.addEventListener('mouseleave', () => {
+            profilePicture.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #181717bd;
+}
+
+/* Header */
+header {
+    background-color: #131212;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #ff0;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('Oz.jpg');
+    background-size: cover;
+    color: rgba(243, 0, 0, 0.301);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero .hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#hero .hero-text p {
+    font-size: 20px;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    background-color: rgb(155, 72, 72);
+}
+
+section h2 {
+    font-size: 37px;
+    color: rgba(24, 24, 24, 0.863);
+    margin-bottom: 20px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1b1b1b;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(29, 28, 28);
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #ff0;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('Imageryy.jpg');
+    background-size: cover;
+    color: rgba(31, 29, 29, 0.781);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero .hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#hero .hero-text p {
+    font-size: 20px;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    background-color: whitesmoke;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    color: #1b1a1a9c;
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style-type: none;
+}
+
+section ul li {
+    font-size: 18px;
+    color: #0c0c0c9c;
+    margin: 10px 0;
+}
+
+section ul li strong {
+    color: #080808;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #hero .hero-text h1 {
+        font-size: 36px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p,
+    section ul li {
+        font-size: 16px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Base styles */
+a.back-to-homepage {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50; /* Green background */
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+a.back-to-homepage:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: translateY(-5px); /* Lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state (when clicked) */
+a.back-to-homepage:active {
+    transform: translateY(2px); /* Slight push down when clicked */
+}
+
+/* Adding a subtle underline animation */
+a.back-to-homepage::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(0%);
+}
+
+a.back-to-homepage:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Optional: Text shadow for better contrast */
+a.back-to-homepage {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
